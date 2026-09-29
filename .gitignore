@@ -1,0 +1,10 @@
+models/*.bin
+libnemotron_qnn_bridge.so
+.python-runtime/
+__pycache__/
+*.pyc
+results/
+.cache/
+.env
+.*token*
+*.partial

@@ -1,0 +1,40 @@
+{
+  "original_model": "nvidia/nemotron-3.5-asr-streaming-0.6b",
+  "original_model_card_revision": "ea30d66debe3740a08b573244286791d423d6b3e",
+  "onnx_export": {
+    "repository": "soniqo/Nemotron-3.5-ASR-Streaming-Multilingual-0.6B-ONNX-FP16",
+    "revision": "76daabfd0aaf5ec6ef1e6640eae3b364af6c9970"
+  },
+  "metadata_export": {
+    "repository": "soniqo/Nemotron-3.5-ASR-Streaming-Multilingual-0.6B-LiteRT-FP16",
+    "revision": "1503a9a1eb75b813b83ba65bf5e9fecea4a46091"
+  },
+  "frontend_reference": {
+    "repository": "https://github.com/soniqo/speech-core",
+    "revision": "f0050757a7d7d24c60b17e60016989ecd07a491d",
+    "license": "Apache-2.0"
+  },
+  "compilation": {
+    "encoder": {
+      "id": "j5wlkeyzp",
+      "url": "https://workbench.aihub.qualcomm.com/jobs/j5wlkeyzp/",
+      "options": "--target_runtime precompiled_qnn_onnx --qairt_version 2.45 --truncate_64bit_io --qnn_options default_graph_htp_precision=FLOAT16"
+    },
+    "decoder-step": {
+      "id": "jgolx2yxg",
+      "url": "https://workbench.aihub.qualcomm.com/jobs/jgolx2yxg/",
+      "options": "--target_runtime precompiled_qnn_onnx --qairt_version 2.45 --truncate_64bit_io --qnn_options default_graph_htp_precision=FLOAT16"
+    },
+    "joint-token": {
+      "id": "jpvl863j5",
+      "url": "https://workbench.aihub.qualcomm.com/jobs/jpvl863j5/",
+      "options": "--target_runtime precompiled_qnn_onnx --qairt_version 2.45 --truncate_64bit_io --qnn_options default_graph_htp_precision=FLOAT16"
+    }
+  },
+  "changes": [
+    "Encoder optimization and exact cache-length integer Neg compatibility rewrite",
+    "Prediction LSTM expansion to one-step matrix and activation operations",
+    "Joint LogSoftmax replaced with NPU ArgMax",
+    "Float32/int32 graph interfaces; FP16 internal neural compilation"
+  ]
+}

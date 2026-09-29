@@ -1,0 +1,147 @@
+{
+  "dataset": {
+    "dataset": "google/fleurs",
+    "config": "en_us",
+    "split": "test",
+    "revision": "168de341b3db6859a9bac1c50a2ef5e3b47647e0",
+    "expected_bytes": 401722686,
+    "url": "https://huggingface.co/datasets/google/fleurs/resolve/168de341b3db6859a9bac1c50a2ef5e3b47647e0/en_us/test/0000.parquet",
+    "retrieved_at_utc": "2026-09-29T16:55:26.961884+00:00"
+  },
+  "device": "Arduino VENTUNO Q / Hexagon V75",
+  "inference_and_scoring_location": "Arduino, not Mac",
+  "utterances": 647,
+  "audio_seconds": 6387.9,
+  "audio_minutes": 106.46499999999999,
+  "chunk_ms": 320,
+  "attention_context": [
+    56,
+    3
+  ],
+  "language_prompt": "en-US",
+  "precision": "fp16",
+  "decoding": "greedy RNNT, maximum 10 symbols per encoder frame",
+  "normalization": {
+    "primary": "whisper_normalizer.english.EnglishTextNormalizer 0.1.12 applied symmetrically to FLEURS transcription and model hypothesis",
+    "scorer": "jiwer 4.0.0 corpus sum(S+D+I)/sum(reference words)",
+    "official_recipe": "NVIDIA model card states text normalization but does not specify exact implementation; results are a matched dataset/configuration comparison, not exact reproduction of its scoring pipeline"
+  },
+  "scores": {
+    "english_normalized": {
+      "substitutions": 875,
+      "deletions": 215,
+      "insertions": 125,
+      "hits": 13467,
+      "reference_words": 14557,
+      "word_errors": 1215,
+      "wer_percent": 8.346499965652264
+    },
+    "simple_case_punctuation": {
+      "substitutions": 1111,
+      "deletions": 191,
+      "insertions": 277,
+      "hits": 13173,
+      "reference_words": 14475,
+      "word_errors": 1579,
+      "wer_percent": 10.90846286701209
+    },
+    "english_normalized_raw_reference": {
+      "substitutions": 871,
+      "deletions": 192,
+      "insertions": 380,
+      "hits": 13216,
+      "reference_words": 14279,
+      "word_errors": 1443,
+      "wer_percent": 10.105749702360109
+    }
+  },
+  "original_nvidia_model_card": {
+    "url": "https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b",
+    "revision": "ea30d66debe3740a08b573244286791d423d6b3e",
+    "english_fleurs_wer_320ms_langid_percent": 8.27,
+    "english_fleurs_wer_1120ms_langid_percent": 7.91,
+    "h100_realtime_concurrent_streams_320ms": 960
+  },
+  "comparison": {
+    "wer_difference_percentage_points": 0.07649996565226402,
+    "relative_wer_change_percent": 0.9250298144167335
+  },
+  "performance": {
+    "total_processing_seconds": 876.5839154670684,
+    "corpus_rtf": 0.13722567909126138,
+    "audio_seconds_per_processing_second": 7.287265813674379,
+    "utterance_end_to_end_ms": {
+      "n": 647,
+      "mean": 1354.8437642458555,
+      "median": 1307.515909007634,
+      "min": 497.3723709990736,
+      "max": 3964.088951004669,
+      "p95_linear": 2270.768458797827,
+      "p99_linear": 2763.1616663909504
+    },
+    "utterance_rtf": {
+      "n": 647,
+      "mean": 0.1377595900446235,
+      "median": 0.13692633496164533,
+      "min": 0.12538670772858407,
+      "max": 0.20385897458052366,
+      "p95_linear": 0.14687377613223104,
+      "p99_linear": 0.16992030649855308
+    },
+    "chunk_processing_ms": {
+      "n": 20245,
+      "mean": 42.434504634231516,
+      "median": 41.87237599398941,
+      "min": 34.622710998519324,
+      "max": 86.74763400631491,
+      "p95_linear": 50.63734219584148,
+      "p99_linear": 56.717696402920495
+    },
+    "initialization_ms_per_part": [
+      614.1441250074422,
+      575.5949899903499,
+      558.9204870047979
+    ],
+    "host_process_peak_rss_mib": 1285.5390625,
+    "timing_scope": "wrapper wall time includes frontend, all neural graphs, CPU control and text assembly; excludes npy loading, model init and reporting",
+    "stages": {
+      "encoder": {
+        "calls": 20245,
+        "host_ms": 642383.7834532169,
+        "accelerator_ms": 581631.248
+      },
+      "decoder": {
+        "calls": 40855,
+        "host_ms": 32440.45404114877,
+        "accelerator_ms": 12795.676
+      },
+      "joint": {
+        "calls": 121188,
+        "host_ms": 145233.55432008975,
+        "accelerator_ms": 68053.701
+      }
+    }
+  },
+  "quality": {
+    "empty_hypotheses": 0,
+    "symbol_limit_hits": 0,
+    "all_utterances_scored": true,
+    "all_neural_invocations_htp_verified": true
+  },
+  "profiled_calls": {
+    "encoder": 20245,
+    "decoder": 40855,
+    "joint": 121188
+  },
+  "started_at_utc": "2026-09-29T16:58:16.690035+00:00",
+  "finished_at_utc": "2026-09-29T17:14:32.170879+00:00",
+  "normalizer_versions": {
+    "whisper-normalizer": "0.1.12",
+    "jiwer": "4.0.0"
+  },
+  "model_sha256": {
+    "models/encoder.bin": "6f7abf02167952d5261a42d8328f15dc9a2878011b864aa2222051f881ed1828",
+    "models/decoder.bin": "6ff93fd14a17df3e08335c5afbc6024254427617f44e03182b0a14d0358051cf",
+    "models/joint.bin": "e85e88e0dfa109f033e2efe5f4a3fac19933b3407f6efc5f151aaf33e9c63fce"
+  }
+}

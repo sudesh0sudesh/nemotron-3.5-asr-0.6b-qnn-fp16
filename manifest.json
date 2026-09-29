@@ -1,0 +1,35 @@
+{
+  "release": "v1.0.0",
+  "target": "Arduino VENTUNO Q",
+  "soc_model": 82,
+  "hexagon": "v75",
+  "precision": "fp16",
+  "qairt_compile": "2.45",
+  "qairt_tested_runtime": "2.46.0.260424121129",
+  "assets": [
+    {
+      "path": "models/encoder.bin",
+      "bytes": 1200738304,
+      "sha256": "6f7abf02167952d5261a42d8328f15dc9a2878011b864aa2222051f881ed1828",
+      "url": "https://github.com/sudesh0sudesh/nemotron-3.5-asr-0.6b-qnn-fp16/releases/download/v1.0.0/encoder.bin"
+    },
+    {
+      "path": "models/decoder.bin",
+      "bytes": 29986816,
+      "sha256": "6ff93fd14a17df3e08335c5afbc6024254427617f44e03182b0a14d0358051cf",
+      "url": "https://github.com/sudesh0sudesh/nemotron-3.5-asr-0.6b-qnn-fp16/releases/download/v1.0.0/decoder.bin"
+    },
+    {
+      "path": "models/joint.bin",
+      "bytes": 19140608,
+      "sha256": "e85e88e0dfa109f033e2efe5f4a3fac19933b3407f6efc5f151aaf33e9c63fce",
+      "url": "https://github.com/sudesh0sudesh/nemotron-3.5-asr-0.6b-qnn-fp16/releases/download/v1.0.0/joint.bin"
+    },
+    {
+      "path": "libnemotron_qnn_bridge.so",
+      "bytes": 70864,
+      "sha256": "0cd4c0b83c62d5448e62c58bd227ecf4b77f1b86a1380c564514c35e0cbef37e",
+      "url": "https://github.com/sudesh0sudesh/nemotron-3.5-asr-0.6b-qnn-fp16/releases/download/v1.0.0/libnemotron_qnn_bridge.so"
+    }
+  ]
+}

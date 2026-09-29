@@ -1,0 +1,47 @@
+{
+  "tested_at_utc": "2026-09-29T17:24:07.029831+00:00",
+  "device": "Arduino VENTUNO Q / Hexagon V75",
+  "fresh_container_per_clip": true,
+  "passed": true,
+  "clips": [
+    {
+      "clip": "jfk",
+      "transcript": "And so my fellow Americans ask not what your country can do for you.  Ask what you can do for your country",
+      "symbol_limit_hits": 0,
+      "htp_calls": {
+        "encoder": 35,
+        "decoder": 46,
+        "joint": 185
+      },
+      "all_htp_events_positive": true
+    },
+    {
+      "clip": "librispeech",
+      "transcript": "Well I don't wish to see it any more, observed Phoebe, turning away her eyes.  It is certainly very like the old portrait",
+      "symbol_limit_hits": 0,
+      "htp_calls": {
+        "encoder": 24,
+        "decoder": 66,
+        "joint": 161
+      },
+      "all_htp_events_positive": true
+    },
+    {
+      "clip": "silence",
+      "transcript": "",
+      "symbol_limit_hits": 0,
+      "htp_calls": {
+        "encoder": 10,
+        "decoder": 1,
+        "joint": 40
+      },
+      "all_htp_events_positive": true
+    }
+  ],
+  "runtime_source_sha256": {
+    "runtime.py": "2f7b42bb71617ab7195a59fddbbb24455dcf6695823edbe68ef64785d45f6b96",
+    "nemotron_qnn_context.py": "334dd779308fe95c2a71a92e86d95c02017f9a2a0f22ada71ecc44d2f4fefd1c",
+    "transcribe.py": "6eea4d1a9b0fbd39378851c4918ec69ede6cb417f1c82ea7c8c80e9a737058ac",
+    "run.sh": "5e67ebb7b836510595792014d654d505c4a7c67c4d9ec8271c74046432d04e6c"
+  }
+}
